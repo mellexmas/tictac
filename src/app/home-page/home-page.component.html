@@ -7,7 +7,12 @@
 
 
         <div *ngFor="let cell of grid" class="cell">
-            <div class="cross"></div>
+            <!-- Solution 1
+            <div *ngIf="!cell.empty && cell.cross" class="cross"></div>
+            <div *ngIf="!cell.empty && cell.circle" class="circle"></div> 
+            -->
+            <div *ngIf="!cell.empty" [class.cross]="cell.cross" [class.circle]="cell.circle"></div>
+
         </div>
 
 

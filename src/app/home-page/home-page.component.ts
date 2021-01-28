@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cell } from '../cell';
 
 @Component({
   selector: 'app-home-page',
@@ -7,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  public grid: Array<any> = [];
+  public grid: Array<Cell> = [];
 
   private  gridSize = 9;
 
   constructor() { 
     for (let i = 0; i < this.gridSize; i++){
-      this.grid.push(null);
+      this.grid.push({
+        empty: true,
+        cross: false,
+        circle: false,
+      });
     }
   }
 
