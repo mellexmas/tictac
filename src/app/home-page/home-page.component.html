@@ -4,16 +4,16 @@
 
     <div class="grid">
 
+        <app-cell *ngFor="let cell of grid" [cell]="cell" (click)="clickOnCell(cell)" class="cell"></app-cell>
 
-
-        <div *ngFor="let cell of grid" (click)="clickOnCell(cell)" class="cell">
-            <!-- Solution 1
+        <!-- <div *ngFor="let cell of grid" (click)="clickOnCell(cell)" class="cell"> -->
+        <!-- Solution 1
             <div *ngIf="!cell.empty && cell.cross" class="cross"></div>
             <div *ngIf="!cell.empty && cell.circle" class="circle"></div> 
-            Solution 2 -->
-            <div *ngIf="!cell.empty" [class.cross]="cell.cross" [class.circle]="cell.circle"></div>
+            Solution 2 
+            <div *ngIf="!cell.empty" [class.cross]="cell.cross" [class.circle]="cell.circle"></div>-->
 
-        </div>
+        <!-- </div> -->
 
 
 
