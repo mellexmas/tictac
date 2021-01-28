@@ -1,0 +1,17 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    
+}
+
+.cell {
+    flex-basis: 33%; // les cell prennent au max 33% de l'espace dispo
+    border: 1px solid black;
+
+    &:before{ // scss on met la regle dans l'autre règle.
+        content :'';
+        display: block;
+        padding-top: 100%;
+    }
+}
