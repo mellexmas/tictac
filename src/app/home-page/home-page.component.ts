@@ -25,4 +25,9 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+public clickOnCell(cell: Cell): void {
+  cell.empty = false;
+  cell.cross = true;
+}
+
 }
